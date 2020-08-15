@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Toaster</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link rel="stylesheet" href='css/style.css'>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"></script>
+</head>
+    <body>
+        <div class="jumbotron jumbotron-fluid bg-primary">
+            <h1 class="display-4 text-center">Smart Toaster</h1>
+        </div>
+
+        <div class="container">
+            <div class="row p-4 mb-4">
+                <div class="col text-center">
+                    <h2 class="">Controls</h2>
+                    <!-- <img src="filter.png" alt="" height="200px" width="200px"> -->
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-3 m-4">
+                    <div class="card">
+                        <img src="assets/start-button.png" class="card-img-top pt-4 onButtonIcon" alt="...">
+                        <img src="assets/power-on.png" style="display:none;" class="card-img-top pt-4 onButtonIcon" id="powerOn" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">On/Off</h5>
+                            <!-- maybe instead of switch, make icon clickable and change color when on -->
+                            <div class="custom-control custom-switch pb-3">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                <label class="custom-control-label" for="customSwitch1">Toggle On/Off</label>
+                            </div>
+                            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p> -->
+                            <!-- <a href="#" id="kazoo" class="btn btn-primary">Go somewhere</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 m-4">
+                    <div class="card">
+                        <img src="assets/fire.png" class="card-img-top pt-4" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Temperature</h5>
+                            <label for="customRange1" id="tempLabel"></label>
+                            <input type="range" class="custom-range" min="0" max="10" id="customRange1">
+                            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 m-4">
+                    <div class="card">
+                        <img src="assets/stopwatch.png" class="card-img-top pt-4" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Time</h5>
+                            <p class="card-text">
+                                <label for="customRange2" id="timeLabel"></label>
+                                <input type="range" class="custom-range" min="0" max="120" id="customRange2">
+                            </p>
+                            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <script src="js/script.js" asp-append-version="true"></script>
+
+    </body>
+
+</html>
